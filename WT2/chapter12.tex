@@ -2,7 +2,7 @@
 \addcontentsline{toc}{chapter}{12. Radon-Nikodym-Ableitungen}
 In diesem Kapitel sei $(\Omega,\mathcal{A})$ ein messbarer Raum und $\nu,\mu$ generische Ma\ss{}e auf diesem Raum.
 \section*{Signierte Ma\ss{}e}
- \addcontentsline{toc}{section}{12.1 Signierte Ma\ss{}e}
+ \addcontentsline{toc}{section}{Signierte Ma\ss{}e}
  
  \paragraph{12.1. Definition:} Ein signiertes Ma\ss{} ist eine Abbildung $\varphi:\mathcal{A}\to\R$, die $\sigma$-additiv ist, i.e. f\"ur $A_n\in\mathcal{A},n\geq1$ disjunkt gilt
  $$\varphi\left(\bigcup_{n\geq1}A_n\right)=\sum_{n\geq1}\varphi(A_n)$$
@@ -104,31 +104,32 @@ In diesem Kapitel sei $(\Omega,\mathcal{A})$ ein messbarer Raum und $\nu,\mu$ ge
      $$\forall A\in\mathcal{A}:\nu(A\cap \Omega^{(m)}_+)-\dfrac{1}{m}\mu(A\cap \Omega^{(m)}_+)\geq0\iff\nu(A\cap \Omega^{(m)}_+)\geq\dfrac{1}{m}\mu(A\cap \Omega^{(m)}_+)$$
      Setze also $B:=\Omega^{(m)}_+$ mit $\eps:=m^{-1}$. Dann gilt wegen $(*)$ auch $\mu(B)=\mu(\Omega^{(m)}_+)>0$. \qed
      
+    
+     
      \paragraph{12.7. Satz (Radon\textendash Nikodym Theorem f\"ur $\sigma$-endliche Ma\ss{}e):} Seien $\mu$ und $\nu$ zwei $\sigma$-endliche Ma\ss{}e, sodass $\nu\ll\mu$. Dann hat $\nu$ eine Dichte bez\"uglich $\mu$, i.e. es gibt ein $f:\Omega\to\R$ messbar, sodass
      \begin{equation}
          \forall A\in\mathcal{A}: \nu(A)=\int_A f \ d\mu
      \end{equation}
      Wir schreiben $f=\dfrac{d\nu}{d\mu}$. Falls insbesondere $g:\Omega\to\R$ eine weitere messbare Abbildung ist, die (7) erf\"ullt, dann gilt $f=g$ $\mu$-a.e.
-     
+          
      \paragraph{Beweis:} Unterscheide hier die F\"alle, wo $\mu,\nu$ beide endlich sind, und den allgemeinen Fall ($\mu,\nu$ beide $\sigma$-endlich).\newline\newline
      1. Fall ($\mu,\nu$ beide endlich): Betrachte die Menge
      $$\mathcal{G}:=\left\{g\geq0:g \text{ messbar und } \forall A\in\mathcal{A}:\int_A g\ d\mu\leq\nu(A)\right\}$$
-     Da die konstante Nullfunktion $0\in\mathcal{G}$, gilt $\mathcal{G}\neq\emptyset$ und es gibt ein $f\in\mathcal{G}$, sodass
-     \begin{equation}
-         \int f\ d\mu=\sup_{g\in\mathcal{G}}\int g\ d\mu
-     \end{equation}
-     Zerlege nun $\nu(\cdot)$ als $\nu(A)=\displaystyle\int_A f\ d\mu+\nu_s(A)$ f\"ur $A\in\mathcal{A}$
-     mit Rest $\nu_s(\cdot)$. Dann ist $\nu_s$ ein endliches Ma\ss{} und
-     \begin{equation}
-         \nu_s\perp\mu
-     \end{equation}
-     Zeige also (8) und (9):\newline
-     (8): F\"ur $g,h\in\mathcal{G}$ ist $\max(g,h)\in\mathcal{G}$, denn f\"ur $A\in\mathcal{A}$ gilt
-     $$\int_A \max(g,h)\ d\mu=\int\displaylimits_{A\cap\{g\geq h\}}g\ d\mu+\int\displaylimits_{A\cap\{g<h\}}h\ d\mu\overset{g,h,\in\mathcal{G}}{\leq}\nu(A\cap\{g\geq h\})+\nu(A\cap\{g<h\})=\nu(A)$$
-     F\"ur $g_n\in\mathcal{G},n\geq1$ mit $0\leq g_1\leq\hdots\leq\lim_{n\to\infty}g_n=:g$ ist $g\in\mathcal{G}$, denn f\"ur $A\in\mathcal{A}$ gilt
-     $$\int_A g \ d\mu\overset{\text{MONK}}{=}\lim_{n\to\infty}\int_A g_n\ d\mu\leq\nu(A)$$
-     wobei die letze Ungleichung folgt, da jedes Element der Folge $\int_A g_n \ d\mu$ durch $\nu(A)$ beschr\"ankt ist.\newline\newline
-     (9): Angenommen (9) gilt nicht. Mit Lemma 12.6 gibt es $\eps>0,b\in\mathcal{A}$ mit $\mu(B)>0$, sodass $\forall A\in\mathcal{A}:\eps\cdot \mu(A\cap B)\leq\nu_s(A\cap B)$. Damit folgt f\"ur $A\in\mathcal{A}$
+     Dann gilt $0\in\mathcal{G}$ und f\"ur $g,h\in\mathcal{G}$ ist $\max(g,h)\in\mathcal{G}$, denn f\"ur $A\in\mathcal{A}$ gilt
+     $$\int_A \max(g,h)\ d\mu=\int\displaylimits_{A\cap\{g\geq h\}}g\ d\mu+\int\displaylimits_{A\cap\{g<h\}}h\ d\mu\overset{g,h,\in\mathcal{G}}{\leq}\nu(A\cap\{g\geq h\})+\nu(A\cap\{g<h\})=\nu(A).$$
+      Setze nun $m:=\sup_{g\in\mathcal{G}}\int g\ d\mu<\nu(A)$ und wähle eine Folge $g_n\in\mathcal{G},n\geq1$, sodass
+     $$\lim_{n\to\infty}\int g_n\ d\mu=m.$$
+     Setze $f_n:=\max_{i\leq n}g_i$ und $f:=\sup_{n\geq1}g_n$, sodass 
+     \begin{itemize}
+     	\item $f_n\in\mathcal{G}$ für alle $n\geq1$,
+     	\item $f_n(\omega)\nto{}{n\to\infty}f(\omega)$ für alle $\omega\in\Omega$, monoton nichtfallend in $n$,
+     	\item $m\geq\int f_n\ d\mu\geq\int g_n\ d\mu\nto{}{n\to\infty}m$,
+     \end{itemize}
+     und daher
+     $$\int f\ d\mu\overset{\text{MONK}}{=}\lim_{n\to\infty}\int f_n\ d\mu=m.$$
+     Setze 
+     $$\nu_s(A)=\nu(A)-\displaystyle\int_A f\ d\mu,\ A\in\mathcal{A}.$$ 
+     Dann ist $\nu_s$ ein endliches Ma\ss{} (einfache Überlegung) und $\nu_s\perp\mu$. Angenommen nicht: Mit Lemma 12.6 gibt es $\eps>0,b\in\mathcal{A}$ mit $\mu(B)>0$, sodass $\forall A\in\mathcal{A}:\eps\cdot \mu(A\cap B)\leq\nu_s(A\cap B)$. Damit folgt f\"ur $A\in\mathcal{A}$
      \begin{align*}
          \int_A (f+\eps\cdot\ind{B})\ d\mu&=\int_A f\ d\mu+\eps\cdot\mu(A\cap B)\\
          &\leq\int_A f\ d\mu+\nu_s(A\cap B) \\
@@ -138,9 +139,10 @@ In diesem Kapitel sei $(\Omega,\mathcal{A})$ ein messbarer Raum und $\nu,\mu$ ge
      $$\sup_{g\in\mathcal{G}}\int g\ d\mu\geq\int(f+\eps\cdot\ind{B})\ d\mu=\int f\ d\mu\eps\cdot\mu(B)>\int f\ d\mu=\sup_{g\in\mathcal{G}}\int g\ d\mu$$
      ein Widerspruch.
      \newline\newline
-     Mit (9) folgt per Definition von gegenseitiger Singularit\"at
-     $$\exists M\in\mathcal{A}:\mu(M)=0,\ \nu_s(M^c)=0$$. Da aber $\nu\ll\mu$ ist $\nu(M)=0$ und
-     $$0=\nu(M)\overset{\text{per const.}}{\geq}\nu_s(M)\geq0$$
+     Es gilt per Definition
+     $$\exists M\in\mathcal{A}:\mu(M)=0,\ \nu_s(M^c)=0.$$
+     Da aber $\nu\ll\mu$ ist $\nu(M)=0$ und per Konstruktion
+     $$0=\nu(M)0\geq\nu_s(M)\geq0$$
      und damit 
      $$\nu_s(\Omega)=\nu_s(M)+\nu(M^c)=0$$
      Also ist $\nu_s$ das Nullma\ss{} und $\nu(A)=\int_A f\ d\mu$, womit die erste Aussage folgt.\newline

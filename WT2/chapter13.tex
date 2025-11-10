@@ -160,7 +160,7 @@
     
     \paragraph{13.7. Satz:} Sei $\G\subseteq\A$ eine sub-$\sigma$-Algebra und sei $X$ eine reelwertige Zufallsvariable. Dann existiert eine Funktion $\mu:\borel\times\Omega\to[0,1]$ mit den folgenden Eigenschaften:
     \begin{enumerate}[label=(\roman*)]
-        \item F\"ur $\omega\in\Omega$ fest ist $\mu(\cdotp,\omega):\borel\to[0,1]$ ein Wahrscheinlichkeitsmaß.
+        \item F\"ur $\omega\in\Omega$ fest ist $\mu(\cdotp,\omega):\borel\to[0,1]$ ein Wahrscheinlichkeitsma{\ss}.
         \item F\"ur $B\in\borel$ fest, gilt f\"ur $\mu(B,\cdotp):\Omega\to[0,1]$, dass $\mu(B,\cdotp)=\Pp(X\in B\parallel\G)$ fast sicher. 
     \end{enumerate} 
     Man nennt $\mu(\cdotp,\omega)$ die bedingte Verteilung von $X$ gegeben $\G$.
@@ -169,18 +169,18 @@
     \begin{equation}
         F(q,\omega)\leq F(r,\omega)
     \end{equation}
-    f\"ur alle $w$ außerhalb einer $\Pp$-Nullmenge. Mit DOMK f\"ur bedingte Erwartungswerte (Proposition 13.4) gilt
+    f\"ur alle $w$ au{\ss}erhalb einer $\Pp$-Nullmenge. Mit DOMK f\"ur bedingte Erwartungswerte (Proposition 13.4) gilt
     \begin{equation}
         \forall q\in\mathbb{Q}:F(q,\omega)=\lim_{n\to\infty}F\left(q+\frac{1}{n},\omega\right)
     \end{equation}
-    f\"ur $\omega$ außerhalb einer $\Pp$-Nullmenge und (DOMK)
+    f\"ur $\omega$ au{\ss}erhalb einer $\Pp$-Nullmenge und (DOMK)
     \begin{equation}
         \lim_{n\to\infty}F(-n,\omega)=0\text{ und }\lim_{n\to\infty}F(n,\omega)=1
     \end{equation}
-    außerhalb einer $\Pp$-Nullmenge. Sei $N$ die abz\"ahlbare Vereinigung der in (10), (11) und (12) auftretenden Nullmengen Dann ist $N$ wieder eine $\Pp$-Nullmenge und (10), (11), (12) gelten f\"ur jedes $\omega\in N^c$.\newline\newline
+    au{\ss}erhalb einer $\Pp$-Nullmenge. Sei $N$ die abz\"ahlbare Vereinigung der in (10), (11) und (12) auftretenden Nullmengen Dann ist $N$ wieder eine $\Pp$-Nullmenge und (10), (11), (12) gelten f\"ur jedes $\omega\in N^c$.\newline\newline
     Sei nun $t\in\R$. F\"ur $\omega\in N^c$ setze
     $$F(t,\omega):=\inf\left\{F(q,\omega):t\leq q,q\in\mathbb{Q}\right\}$$
-    und f\"ur $\omega\in N$ setze $F(t,\omega):=F(t)$ f\"ur eine beliebige fest cdf $F$. Mit (10), (11) und (12) ist $F(\cdotp,\omega)$ eine cdf f\"ur jedes $\omega\in\Omega$. F\"ur $\omega\in\Omega$ sei nun $\mu(\cdotp\omega)$ das durch $F(\cdotp.\omega)$ bestimmte Wahrscheinlichkeitsmaß auf $(\R,\borel)$. Damit gilt (i). \newline\newline
+    und f\"ur $\omega\in N$ setze $F(t,\omega):=F(t)$ f\"ur eine beliebige fest cdf $F$. Mit (10), (11) und (12) ist $F(\cdotp,\omega)$ eine cdf f\"ur jedes $\omega\in\Omega$. F\"ur $\omega\in\Omega$ sei nun $\mu(\cdotp\omega)$ das durch $F(\cdotp.\omega)$ bestimmte Wahrscheinlichkeitsma{\ss} auf $(\R,\borel)$. Damit gilt (i). \newline\newline
     Die Mengenfamilie
     $$\mathcal{L}:=\left\{B\in\borel:\mu(B,\cdotp)\text{ ist }\G\text{-messbar}\right\}$$
     ist ein $\lambda$-System (leicht zu pr\"ufen) und enth\"alt das $\pi$-System $\mathcal{M}:=\left\{(-\infty,q]:q\in\mathcal{Q}\right\}$. Mit dem $\lambda\textendash\pi$-Theorem gilt
@@ -192,4 +192,4 @@
     \end{equation}
     F\"ur $G\in\G$ fest gilt (13) f\"ur jede Menge $B\in\mathcal{M}$. Sei nun 
     $$\mathcal{Z}:=\left\{B\in\borel:\E[\ind{G}\cdot\mu(B,\cdotp)]=\Pp(G\cap\{X\in B\})\right\}$$
-    Nun sind in (14) beide Seiten der Gleichung endliche Maße, die auf dem $\pi$-System $\mathcal{M}$ \"ubereinstimmen. Mit Korollar 2.9 folgt, dass die beiden Maße auch auf $\sigma(\mathcal{M})=\borel$ \"ubereinstimmen. Also gilt (13) f\"ur alle $B\in\borel$. Mit Definition 13.1 folgt Aussage (ii). \qed
+    Nun sind in (14) beide Seiten der Gleichung endliche Ma{\ss}e, die auf dem $\pi$-System $\mathcal{M}$ \"ubereinstimmen. Mit Korollar 2.9 folgt, dass die beiden Ma{\ss}e auch auf $\sigma(\mathcal{M})=\borel$ \"ubereinstimmen. Also gilt (13) f\"ur alle $B\in\borel$. Mit Definition 13.1 folgt Aussage (ii). \qed
